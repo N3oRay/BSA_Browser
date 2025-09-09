@@ -2,7 +2,7 @@
 
 This is a CLI program to interact with BSA/BA2 archives, created by request.
 
-# Version GTK for compatibiliy Linux, Window, MAC... 
+# Version GTK (net8.0) for compatibiliy Linux, Window, MAC... 
 by N3oRay
 
 Compilation OK with Dotnet - Test in progress

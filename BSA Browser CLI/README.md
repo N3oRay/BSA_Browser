@@ -18,3 +18,5 @@ Compilation OK with Dotnet - Test in progress
     3 - Accéder au dossier du projet principal (par exemple cd "BSA Browser" ou cd "BSA Browser CLI" selon la version à compiler).
     4 - Lancer la compilation avec :
         #dotnet build
+    5 - Publish :
+        #dotnet publish 

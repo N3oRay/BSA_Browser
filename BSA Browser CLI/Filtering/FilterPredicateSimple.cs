@@ -1,3 +1,4 @@
+/*
 ﻿using System.Management.Automation;
 
 namespace BSA_Browser_CLI.Filtering
@@ -19,3 +20,4 @@ namespace BSA_Browser_CLI.Filtering
         }
     }
 }
+*/

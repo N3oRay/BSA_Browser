@@ -44,12 +44,12 @@ namespace BSA_Browser_CLI
             {
                 switch (filter.Type)
                 {
-                    case FilteringTypes.Simple:
-                        _filters.Add(new FilterPredicateSimple(filter.Pattern));
-                        break;
-                    case FilteringTypes.SimpleExclude:
-                        _filters.Add(new FilterPredicateSimpleExclude(filter.Pattern));
-                        break;
+                    //case FilteringTypes.Simple:
+                    //    _filters.Add(new FilterPredicateSimple(filter.Pattern));
+                    //    break;
+                    //case FilteringTypes.SimpleExclude:
+                    //    _filters.Add(new FilterPredicateSimpleExclude(filter.Pattern));
+                    //    break;
                     case FilteringTypes.Regex:
                         try
                         {
@@ -233,7 +233,7 @@ namespace BSA_Browser_CLI
 
                 HandleUnsupportedTextures(files);
 
-                // Some Console properties might not be available in certain situations, 
+                // Some Console properties might not be available in certain situations,
                 // e.g. when redirecting stdout. To prevent crashing, setting the cursor position should only
                 // be done if there actually is a cursor to be set.
                 try

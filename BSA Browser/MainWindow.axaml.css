@@ -1,0 +1,36 @@
+using Avalonia.Controls;
+using Avalonia.Interactivity;
+using System.Threading.Tasks;
+
+namespace BSABrowser
+{
+    public partial class MainWindow : Window
+    {
+        public MainWindow()
+        {
+            InitializeComponent();
+        }
+
+        private async void OpenFile_Click(object? sender, RoutedEventArgs e)
+        {
+            var dialog = new OpenFileDialog
+            {
+                Title = "Ouvrir une archive BSA/BA2",
+                AllowMultiple = false,
+                Filters = { new FileDialogFilter { Name = "Archives BSA/BA2", Extensions = { "bsa", "ba2" } } }
+            };
+            var files = await dialog.ShowAsync(this);
+            if (files != null && files.Length > 0)
+            {
+                // Ajoute le chemin du fichier sélectionné à la ListBox
+                var archiveList = this.FindControl<ListBox>("ArchiveList");
+                archiveList.Items = new[] { files[0] }; // Pour l’exemple : remplacer pour gérer plusieurs fichiers
+            }
+        }
+
+        private void Exit_Click(object? sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+    }
+}

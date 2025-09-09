@@ -21,7 +21,6 @@ namespace BSA_Browser
 
         private Encoding[] _encodings = new Encoding[]
         {
-            Encoding.UTF7,
             Encoding.Default,
             Encoding.ASCII,
             Encoding.Unicode,

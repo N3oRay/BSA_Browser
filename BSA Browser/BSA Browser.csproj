@@ -1,262 +1,39 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProductVersion>8.0.30703</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{63F0485C-8F38-4636-B255-3328E660664D}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BSA_Browser</RootNamespace>
-    <AssemblyName>BSA Browser</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
-    <TargetFrameworkProfile>
-    </TargetFrameworkProfile>
-    <FileAlignment>512</FileAlignment>
+    <TargetFramework>net8.0</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <RootNamespace>BSA_Browser_CLI</RootNamespace>
+    <AssemblyName>bsab</AssemblyName>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
-    <PlatformTarget>x86</PlatformTarget>
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
-    <PlatformTarget>x86</PlatformTarget>
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
-  </PropertyGroup>
-  <PropertyGroup>
-    <ApplicationIcon>Resources\fomm01.ico</ApplicationIcon>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
-    <DebugSymbols>true</DebugSymbols>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <DebugType>full</DebugType>
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
-    <Prefer32Bit>false</Prefer32Bit>
-    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <Optimize>false</Optimize>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <Optimize>true</Optimize>
-    <DebugType>pdbonly</DebugType>
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
-    <Prefer32Bit>false</Prefer32Bit>
-    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-  </PropertyGroup>
+
   <ItemGroup>
-    <Reference Include="ICSharpCode.TextEditor, Version=4.2.0.0, Culture=neutral, PublicKeyToken=4d61825e8dd49f1a, processorArchitecture=MSIL">
-      <HintPath>..\packages\ICSharpCode.TextEditor.Extended.4.2.4\lib\net45\ICSharpCode.TextEditor.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.VisualBasic" />
-    <Reference Include="ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4, processorArchitecture=MSIL">
-      <HintPath>..\packages\ObjectListView.Official.2.9.1\lib\net20\ObjectListView.dll</HintPath>
-    </Reference>
-    <Reference Include="Pfim, Version=0.9.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Pfim.0.9.1\lib\netstandard2.0\Pfim.dll</HintPath>
-    </Reference>
-    <Reference Include="System" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Management.Automation, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Management.Automation.dll.10.0.10586.0\lib\net40\System.Management.Automation.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.XML" />
+    <PackageReference Include="Avalonia" Version="11.0.0" />
+    <PackageReference Include="Avalonia.Desktop" Version="11.0.0" />
+    <PackageReference Include="GtkSharp" Version="3.24.24.95" />
+    <PackageReference Include="System.Management" Version="8.0.0" />
+    <PackageReference Include="System.Resources.Extensions" Version="8.0.0" />
   </ItemGroup>
+
   <ItemGroup>
-    <Compile Include="AboutBox.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AboutBox.Designer.cs">
-      <DependentUpon>AboutBox.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Classes\FileAssociation.cs" />
-    <Compile Include="Controls\ReorderableTreeView.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Dialogs\UnsupportedTexturesMessageBox.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Dialogs\UnsupportedTexturesMessageBox.Designer.cs">
-      <DependentUpon>UnsupportedTexturesMessageBox.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Enums\ArchiveFileSortOrder.cs" />
-    <Compile Include="Sorting\ArchiveFileSorter.cs" />
-    <Compile Include="BSABrowser.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BSABrowser.Designer.cs">
-      <DependentUpon>BSABrowser.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Classes\ArchiveNode.cs" />
-    <Compile Include="Classes\Common.cs" />
-    <Compile Include="Classes\ExtractOperation.cs" />
-    <Compile Include="Classes\ShellExecute.cs" />
-    <Compile Include="Classes\SystemIcons.cs" />
-    <Compile Include="Classes\LimitedAction.cs" />
-    <Compile Include="Dialogs\OpenFolderDialog.cs" />
-    <Compile Include="Classes\QuickExtractPath.cs" />
-    <Compile Include="Classes\QuickExtractPaths.cs" />
-    <Compile Include="Classes\WindowState.cs" />
-    <Compile Include="Classes\WindowStates.cs" />
-    <Compile Include="Tools\CompareForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Tools\CompareForm.Designer.cs">
-      <DependentUpon>CompareForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Controls\ReorderableItemListView.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Enums\Icons.cs" />
-    <Compile Include="Extensions\TreeViewExtensions.cs" />
-    <Compile Include="Extensions\VisualStyleExtensions.cs" />
-    <Compile Include="Preview\DDSViewer.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Preview\DDSViewer.Designer.cs">
-      <DependentUpon>DDSViewer.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Dialogs\ExtractArchivesDialog.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Dialogs\ExtractArchivesDialog.Designer.cs">
-      <DependentUpon>ExtractArchivesDialog.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Dialogs\QuickExtractDialog.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Dialogs\QuickExtractDialog.Designer.cs">
-      <DependentUpon>QuickExtractDialog.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Preview\TextViewer.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Preview\TextViewer.Designer.cs">
-      <DependentUpon>TextViewer.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Extensions\ListViewExtensions.cs" />
-    <Compile Include="OptionsForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="OptionsForm.Designer.cs">
-      <DependentUpon>OptionsForm.cs</DependentUpon>
-    </Compile>
+    <ProjectReference Include="..\Sharp.BSA.BA2\Sharp.BSA.BA2.csproj" />
+  </ItemGroup>
+
+  <!-- N'ajoute PAS de balises <Compile Include=...> ici
+  <ItemGroup>
+    <Compile Include="Arguments.cs" />
+    <Compile Include="Filtering\Filter.cs" />
+    <Compile Include="Filtering\FilteringTypes.cs" />
+    <Compile Include="Filtering\FilterPredicateRegex.cs" />
+    <Compile Include="Filtering\FilterPredicateSimple.cs" />
+    <Compile Include="Filtering\FilterPredicateSimpleExclude.cs" />
+    <Compile Include="Filtering\IFilterPredicate.cs" />
     <Compile Include="Program.cs" />
-    <Compile Include="ProgressForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ProgressForm.Designer.cs">
-      <DependentUpon>ProgressForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Settings.cs" />
-    <Compile Include="Sorting\NaturalFileInfoNameComparer.cs" />
-    <Compile Include="Sorting\NaturalStringComparer.cs" />
-    <Compile Include="Sorting\SafeNativeMethods.cs" />
-    <Compile Include="Enums\SystemErrorCodes.cs" />
-    <Compile Include="Sorting\SortingConfig.cs" />
-    <Compile Include="Tools\CompareEntryWindow.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Tools\CompareEntryWindow.Designer.cs">
-      <DependentUpon>CompareEntryWindow.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Sorting\TreeNodeSorter.cs" />
-    <EmbeddedResource Include="AboutBox.resx">
-      <DependentUpon>AboutBox.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BSABrowser.resx">
-      <DependentUpon>BSABrowser.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Dialogs\UnsupportedTexturesMessageBox.resx">
-      <DependentUpon>UnsupportedTexturesMessageBox.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Tools\CompareForm.resx">
-      <DependentUpon>CompareForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Preview\DDSViewer.resx">
-      <DependentUpon>DDSViewer.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Dialogs\ExtractArchivesDialog.resx">
-      <DependentUpon>ExtractArchivesDialog.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Dialogs\QuickExtractDialog.resx">
-      <DependentUpon>QuickExtractDialog.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Preview\TextViewer.resx">
-      <DependentUpon>TextViewer.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="OptionsForm.resx">
-      <DependentUpon>OptionsForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ProgressForm.resx">
-      <DependentUpon>ProgressForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <EmbeddedResource Include="Tools\CompareEntryWindow.resx">
-      <DependentUpon>CompareEntryWindow.cs</DependentUpon>
-    </EmbeddedResource>
-    <None Include="app.config" />
-    <None Include="mw_hash_table.bin">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="packages.config" />
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\unloaded.png" />
-    <None Include="Resources\all.png" />
-    <Content Include="Resources\fomm01.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Sharp.BSA.BA2\Sharp.BSA.BA2.csproj">
-      <Project>{ca4a7785-f222-4caa-84ef-6bfdd584dc83}</Project>
-      <Name>Sharp.BSA.BA2</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
   -->
 </Project>

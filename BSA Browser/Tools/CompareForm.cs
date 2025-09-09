@@ -6,15 +6,7 @@ using BSA_Browser.Sorting;
 using SharpBSABA2;
 using SharpBSABA2.Enums;
 using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Management.Automation;
-using System.Text.RegularExpressions;
-using System.Threading;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+using Gtk;
 
 namespace BSA_Browser.Tools
 {

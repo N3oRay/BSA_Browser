@@ -33,10 +33,10 @@ namespace SharpBSABA2
 
         static Archive()
         {
-            lz4.AnyCPU.loader.LZ4Loader.DisableVCRuntimeDetection = true;
+           // lz4.AnyCPU.loader.LZ4Loader.DisableVCRuntimeDetection = true;
         }
 
-        protected Archive(string filePath) : this(filePath, Encoding.UTF7) { }
+        protected Archive(string filePath) : this(filePath, Encoding.UTF8) { }
         protected Archive(string filePath, Encoding encoding) : this(filePath, encoding, false) { }
         protected Archive(string filePath, Encoding encoding, bool retrieveRealSize)
         {

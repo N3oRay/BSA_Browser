@@ -1,0 +1,21 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="BSABrowser.MainWindow"
+        Title="BSA Browser - Avalonia"
+        Width="800"
+        Height="500">
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="_Fichier">
+                <MenuItem Header="_Ouvrir..." Click="OpenFile_Click"/>
+                <MenuItem Header="_Quitter" Click="Exit_Click"/>
+            </MenuItem>
+        </Menu>
+        <StackPanel Margin="12">
+            <TextBlock FontSize="18" Text="Bienvenue dans BSA Browser (AvaloniaUI)"/>
+            <Button Name="btnOpen" Content="Ouvrir une archive" Width="180" Margin="0,15,0,10" Click="OpenFile_Click"/>
+            <ListBox Name="ArchiveList" Height="300"/>
+            <Button Name="btnExit" Content="Quitter" Width="120" Margin="0,10,0,0" Click="Exit_Click"/>
+        </StackPanel>
+    </DockPanel>
+</Window>

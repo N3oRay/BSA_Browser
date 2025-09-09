@@ -275,7 +275,7 @@ namespace SharpBSABA2.BSAUtil
             }
         }
 
-        public static bool IsSupportedVersion(string filePath) => IsSupportedVersion(filePath, Encoding.UTF7);
+        public static bool IsSupportedVersion(string filePath) => IsSupportedVersion(filePath, Encoding.UTF8);
         public static bool IsSupportedVersion(string filePath, Encoding encoding)
         {
             using (var br = new BinaryReader(new FileStream(filePath, FileMode.Open, FileAccess.Read), encoding))

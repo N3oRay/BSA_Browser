@@ -1,4 +1,6 @@
+/*
 ﻿using System.Management.Automation;
+﻿//using System.Text.RegularExpressions;
 
 namespace BSA_Browser_CLI.Filtering
 {
@@ -20,3 +22,4 @@ namespace BSA_Browser_CLI.Filtering
         }
     }
 }
+*/

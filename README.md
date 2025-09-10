@@ -1,7 +1,7 @@
 ## BSA Browser
 
 ### Introduction
-BSA Browser is a Bethesda Archive browser & extractor application for Windows. Games that are supported includes the Fallout series and Elder Scrolls series (except Elder Scrolls Online).
+BSA Browser is a Bethesda Archive browser & extractor application for Linux, Windows, or MAC. Games that are supported includes the Fallout series and Elder Scrolls series (except Elder Scrolls Online).
 
 BSA Browser started as a fork of [Fallout Mod Manager](https://sourceforge.net/projects/fomm/)'s BSA Browser as a standalone application & has been steadily improved with more features.
 

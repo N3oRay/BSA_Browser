@@ -25,6 +25,36 @@ Compilation OK with Dotnet - Test in progress
 -- Sample extraction and overite
 
     ./BSA\ Browser\ CLI bluearchmage.bsa -e -o .
+    
+-- Sample extraction and overite
+
+    ./BSA\ Browser\ CLI archiveSkyrim.bsa -e -o .
+Extracting: 12/12 - textures/clothes/warrior/m/robe_n.dds
+
+    ./BSA\ Browser\ CLI archiveSkyrim.bsa --noheaders -e -o .
+Extracting: 12/12 - textures/clothes/archmage/m/robe_n.dds
+
+    ./BSA\ Browser\ CLI archiveFallout4.bsa --mtc -e -o .
+Extracting: 12/12 - textures/clothes/cyber/m/robe_n.dds
+
+    ./BSA\ Browser\ CLI archiveSkyrim.bsa  -e -o .
+Extracting: 12/12 - textures/clothes/mage/m/robe_n.dds
+
+# Command List -------------
+    ./BSA\ Browser\ CLI bluearchmage.bsa  -l
+    textures/clothes/archmage/f/boots.dds
+    textures/clothes/archmage/f/boots_n.dds
+    textures/clothes/archmage/f/hood.dds
+    textures/clothes/archmage/f/hood_n.dds
+    textures/clothes/archmage/f/robes.dds
+    textures/clothes/archmage/f/robes_n.dds
+    textures/clothes/archmage/m/boots.dds
+    textures/clothes/archmage/m/boots_n.dds
+    textures/clothes/archmage/m/hood.dds
+    textures/clothes/archmage/m/hood_n.dds
+    textures/clothes/archmage/m/robe.dds
+    textures/clothes/archmage/m/robe_n.dds
+
 
 # ----------- Notice --------------
 
@@ -58,3 +88,14 @@ Compilation OK with Dotnet - Test in progress
       --mtc                  Match time changed on extracted files with archive
     
     Multiple filters can be defined and mixed. Filters are matched from first to last.
+
+
+# --- Installaton de .NET
+
+Pour vérifier la version du SDK installée, exécuter dans un terminal:
+
+    dotnet --list-sdks
+
+Le résultat doit être similaire à:
+
+    8.0.119 [/usr/lib/dotnet/sdk] or 8.0.112 [/usr/lib/dotnet/sdk]

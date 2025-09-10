@@ -47,7 +47,7 @@ namespace BSA_Browser_CLI
 
         public string Destination { get; private set; }
 
-        public Encoding Encoding { get; private set; } = Encoding.UTF7;
+        public Encoding Encoding { get; private set; } = Encoding.UTF8;
 
         public IReadOnlyCollection<string> Inputs { get; private set; }
         public IReadOnlyCollection<Filter> Filters { get; private set; }

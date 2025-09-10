@@ -151,12 +151,12 @@ namespace BSA_Browser_CLI
             Console.WriteLine("  --exclude FILTER       Exclude using simple filtering. Wildcard supported. Case-insensitive");
             Console.WriteLine("  --regex REGEX          Regex filtering. Case-sensitive");
             Console.WriteLine("  --encoding ENCODING    Set encoding to use");
-            Console.WriteLine("     encodings             utf7     (Default)");
+            Console.WriteLine("     encodings             utf8     (Default)");
             Console.WriteLine("                           system   Use system default encoding");
             Console.WriteLine("                           ascii");
             Console.WriteLine("                           unicode");
             Console.WriteLine("                           utf32");
-            Console.WriteLine("                           utf8");
+            Console.WriteLine("                           utf7");
             Console.WriteLine("  --noheaders            Extract unsupported textures without DDS header instead of skipping");
             Console.WriteLine("  --mtc                  Match time changed on extracted files with archive");
             Console.WriteLine();

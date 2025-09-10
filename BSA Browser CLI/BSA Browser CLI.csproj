@@ -8,18 +8,11 @@
     <LangVersion>latest</LangVersion>
   </PropertyGroup>
 
+
   <ItemGroup>
     <ProjectReference Include="..\Sharp.BSA.BA2\Sharp.BSA.BA2.csproj" />
-    <ProjectReference Include="..\Libs\AtkSharp\AtkSharp.csproj" />
-    <ProjectReference Include="..\Libs\CairoSharp\CairoSharp.csproj" />
-    <ProjectReference Include="..\Libs\GdkSharp\GdkSharp.csproj" />
-    <ProjectReference Include="..\Libs\GioSharp\GioSharp.csproj" />
-    <ProjectReference Include="..\Libs\GLibSharp\GLibSharp.csproj" />
-    <ProjectReference Include="..\Libs\GtkSharp\GtkSharp.csproj" />
-    <ProjectReference Include="..\Libs\PangoSharp\PangoSharp.csproj" />
-    <ProjectReference Include="..\Libs\GtkSourceSharp\GtkSourceSharp.csproj" />
-    <ProjectReference Include="..\Libs\WebkitGtkSharp\WebkitGtkSharp.csproj" />
   </ItemGroup>
+
 
   <ItemGroup>
     <PackageReference Include="GtkSharp" Version="3.24.24.95" />

@@ -9,17 +9,23 @@ Compilation OK with Dotnet - Test in progress
 
 # For linux -----------------------
 
+1 - Install .NET SDK (for example with the command: 
+`sudo apt install dotnet-sdk-8.0`
 
-    1 - Installer .NET SDK (par exemple avec la commande :
-        #sudo apt install dotnet-sdk-8.0
-        (ou en suivant la documentation officielle de .NET).
-    2 - Cloner le dépôt :
-        #git clone https://github.com/N3oRay/BSA_Browser.git
-    3 - Accéder au dossier du projet principal (par exemple cd "BSA Browser" ou cd "BSA Browser CLI" selon la version à compiler).
-    4 - Lancer la compilation avec :
-        #dotnet build
-    5 - Publish :
-        #dotnet publish
+(or by following the official .NET documentation).
+2 - Clone the deposit: 
+`git clone https://github.com/N3oRay/BSA_Browser.git`
+3 - Access the main project file (for according to the version to be compiled).
+`cd "BSA Browser CLI"`
+4 - Launch the compilation with: 
+`dotnet build`
+5 - Publish: 
+`dotnet publish`
+
+
+Currently, only "BSA Browser CLI" works on Linux via the command line.
+
+I am currently working on "BSA Browser" to have a multi-Platfrom project.
 
 # Commande -------------
 -- Sample extraction and overite

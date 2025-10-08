@@ -15,10 +15,130 @@
     <!-- As we already provide GTK3 on Windows via GtkSharp.Dependencies this is redundant. -->
     <SkipGtkInstall>true</SkipGtkInstall>
     <TieredPGO>true</TieredPGO>
+	<EnableDefaultCompileItems>false</EnableDefaultCompileItems>
   </PropertyGroup>
 
 
+ 
   <ItemGroup>
+    <Compile Include="AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutBox.Designer.cs">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\FileAssociation.cs" />
+    <Compile Include="Controls\ReorderableTreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Dialogs\UnsupportedTexturesMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\UnsupportedTexturesMessageBox.Designer.cs">
+      <DependentUpon>UnsupportedTexturesMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Enums\ArchiveFileSortOrder.cs" />
+    <Compile Include="Sorting\ArchiveFileSorter.cs" />
+    <Compile Include="BSABrowser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BSABrowser.Designer.cs">
+      <DependentUpon>BSABrowser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\ArchiveNode.cs" />
+    <Compile Include="Classes\Common.cs" />
+    <Compile Include="Classes\ExtractOperation.cs" />
+    <Compile Include="Classes\ShellExecute.cs" />
+    <Compile Include="Classes\SystemIcons.cs" />
+    <Compile Include="Classes\LimitedAction.cs" />
+    <Compile Include="Dialogs\OpenFolderDialog.cs" />
+    <Compile Include="Classes\QuickExtractPath.cs" />
+    <Compile Include="Classes\QuickExtractPaths.cs" />
+    <Compile Include="Classes\WindowState.cs" />
+    <Compile Include="Classes\WindowStates.cs" />
+    <Compile Include="Tools\CompareForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\CompareForm.Designer.cs">
+      <DependentUpon>CompareForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ReorderableItemListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Enums\Icons.cs" />
+    <Compile Include="Extensions\TreeViewExtensions.cs" />
+    <Compile Include="Extensions\VisualStyleExtensions.cs" />
+    <Compile Include="Preview\DDSViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Preview\DDSViewer.Designer.cs">
+      <DependentUpon>DDSViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\ExtractArchivesDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ExtractArchivesDialog.Designer.cs">
+      <DependentUpon>ExtractArchivesDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\QuickExtractDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\QuickExtractDialog.Designer.cs">
+      <DependentUpon>QuickExtractDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Preview\TextViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Preview\TextViewer.Designer.cs">
+      <DependentUpon>TextViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions\ListViewExtensions.cs" />
+    <Compile Include="OptionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OptionsForm.Designer.cs">
+      <DependentUpon>OptionsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="ProgressForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgressForm.Designer.cs">
+      <DependentUpon>ProgressForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="Sorting\NaturalFileInfoNameComparer.cs" />
+    <Compile Include="Sorting\NaturalStringComparer.cs" />
+    <Compile Include="Sorting\SafeNativeMethods.cs" />
+    <Compile Include="Enums\SystemErrorCodes.cs" />
+    <Compile Include="Sorting\SortingConfig.cs" />
+    <Compile Include="Tools\CompareEntryWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\CompareEntryWindow.Designer.cs">
+      <DependentUpon>CompareEntryWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sorting\TreeNodeSorter.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="mw_hash_table.bin">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
     <None Remove="**\*.glade" />
     <EmbeddedResource Include="**\*.glade">
       <LogicalName>%(Filename)%(Extension)</LogicalName>

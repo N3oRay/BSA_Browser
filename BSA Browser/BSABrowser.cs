@@ -24,13 +24,13 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
-//using System.Windows.Forms;
-using Gdk;
-using Gtk;
+using System.Windows.Forms;
+//using Gdk;
+//using Gtk;
 
 namespace BSA_Browser
 {
-    public partial class BSABrowser : Gtk.Window
+    public partial class BSABrowser : Form
     {
         private const string UpdateMarker = "(!) ";
 

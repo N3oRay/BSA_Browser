@@ -110,3 +110,5 @@ Pour vérifier la version du SDK installée, exécuter dans un terminal:
 Le résultat doit être similaire à:
 
     8.0.119 [/usr/lib/dotnet/sdk] or 8.0.112 [/usr/lib/dotnet/sdk]
+ou pour Windows
+    8.0.414 [C:\Program Files\dotnet\sdk]

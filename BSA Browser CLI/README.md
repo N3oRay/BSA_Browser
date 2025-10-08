@@ -9,8 +9,8 @@ Compilation OK with Dotnet - Test in progress
 
 # For Window ---------------------------------------
 1 - Install .NET SDK (for example with the command: 
-winget install --id=Microsoft.DotNet.Runtime.8 -e;
-winget install --id=Microsoft.DotNet.SDK.8  -e;
+`winget install --id=Microsoft.DotNet.Runtime.8 -e; `
+`winget install --id=Microsoft.DotNet.SDK.8  -e;`
 
 # For linux -----------------------
 

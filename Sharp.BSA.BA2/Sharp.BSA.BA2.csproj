@@ -37,7 +37,7 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="SharpZipLib" Version="1.4.2" />
-    <PackageReference Include="K4os.Compression.LZ4" Version="1.3.5" />
+    <PackageReference Include="K4os.Compression.LZ4" Version="1.3.8" />
     <Reference Include="Extensions.Data.xxHash, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\xxHash.NET.1.0.2\lib\net40\Extensions.Data.xxHash.dll</HintPath>
     </Reference>
